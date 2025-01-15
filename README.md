@@ -1,14 +1,13 @@
 ## CRISPR Base-Editor Guide Planner
 <img src="CRISPR BE.jpg" align="right" width="200" style="border-radius: 50%; margin-right: 10px;"> CRISPR-Cas9 systems, originally discovered as part of the adaptive immune system of bacteria, have revolutionized genome editing by enabling precise and efficient DNA modifications using RNA-guided endonucleases. 
 
- In particular, CRISPR base-editor is an advanced tool that generates single-nucleotide changes without introducing double-strand breaks. This holds great promise for studying genetic variants and therapeutic applications. Designing guide RNAs (gRNAs) for base editing is challenging and requires detailed computation to ensure specificity and efficacy. 
+In particular, CRISPR base-editor is an advanced tool that generates single-nucleotide changes without introducing double-strand breaks. This holds great promise for studying genetic variants and therapeutic applications. Designing guide RNAs (gRNAs) for base editing is challenging and requires detailed computation to ensure specificity and efficacy. 
 
 ## Aim
 <img src="sgRNA.jpg" align="right" width="200" style="border-radius: 50%; margin-right: 10px;">
-This project aims to develop a Python-based tool to assist us - students and researchers - in designing gRNAs tailored for CRISPR base-editing. The tool will identify candidate gRNAs and predict their potential edits. It will further assess the biological impact of the induced mutation (mis-sense, non-sense, frameshifts etc.) and search for those associated with disease. 
+This project aims to develop a Python-based tool to assist us - students and researchers - in designing gRNAs tailored for CRISPR base-editing. The tool will identify candidate gRNAs and predict their potential edits. It will further assess the biological impact of the induced mutation (mis-sense, non-sense, frameshifts etc.) and search for those associated with disease.
 
-As part of my research on the devastating neurodegenerative disease **Amyotrophic lateral sclerosis (ALS)** I aim to model familial SOD1-ALS in cell culture.
-This tool will help me design guides for creating ALS-related mutations in HT29 cells that have the CRISPR base-editor integrated into their genomes.
+As part of my research on the devastating neurodegenerative disease **Amyotrophic lateral sclerosis (ALS)** I aim to model familial SOD1-ALS in cell culture.This tool will help me design guides for creating ALS-related mutations in HT29 cells that have the CRISPR base-editor integrated into their genomes.
 
 ## Programs logic 
 
