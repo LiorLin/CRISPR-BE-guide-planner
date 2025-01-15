@@ -4,6 +4,7 @@
  In particular, CRISPR base-editor is an advanced tool that generates single-nucleotide changes without introducing double-strand breaks. This holds great promise for studying genetic variants and therapeutic applications. Designing guide RNAs (gRNAs) for base editing is challenging and requires detailed computation to ensure specificity and efficacy. 
 
 ## Aim
+<img src="sgRNA.jpg" align="right" width="200" style="border-radius: 50%; margin-right: 10px;">
 This project aims to develop a Python-based tool to assist us - students and researchers - in designing gRNAs tailored for CRISPR base-editing. The tool will identify candidate gRNAs and predict their potential edits. It will further assess the biological impact of the induced mutation (mis-sense, non-sense, frameshifts etc.) and search for those associated with disease. 
 
 As part of my research on the devastating neurodegenerative disease **Amyotrophic lateral sclerosis (ALS)** I aim to model familial SOD1-ALS in cell culture.
