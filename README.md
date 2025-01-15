@@ -9,7 +9,7 @@ In particular, CRISPR base-editor is an advanced tool that generates single-nucl
 
 <p>As part of my research on the devastating neurodegenerative disease Amyotrophic lateral sclerosis (ALS) I aim to model familial SOD1-ALS in cell culture.This tool will help me design guides for creating ALS-related mutations in HT29 cells that have the CRISPR base-editor integrated into their genomes.</p>
 
-## Programs logic 
+## Streamline
 
 - **Data Retrieval:** Fetch gene sequences from the UCSC Genome Browser.
 - **Guide Identification:** Identify 20-base sequences upstream of PAM sites (NGG) with Cytidines (C) in target positions.
@@ -19,7 +19,7 @@ In particular, CRISPR base-editor is an advanced tool that generates single-nucl
 - **Disease Association:** Compare simulated mutations with known disease variants to prioritize guides.
 - **Output:** Export the results including guide sequences, position, simulated mutation, predicted effect,<br> and disease-association to CSV or Excel format.
 
-## Predicted requirments
+## Requirments
 - Python 3.8+
 - Libraries: BioPython, Pandas, Requests
 - Access to UCSC Genome Browser or equivalent genome database
