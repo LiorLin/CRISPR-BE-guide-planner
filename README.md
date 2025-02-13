@@ -50,10 +50,13 @@ From the provided list of valid guides relevant once can be chosen based on the 
 ```bash
 pip install requests biopython
 ````
+## Running the program
 - To execute the full pipeline, run:
 ```bash
 python main.py
 ```
+- The program will ask you to "Enter the gene of interest:"
+
 ## Testing the code 
 There are test codes for the different modules to verify that the program functions correctly and produces the expected results. 
 ## Remarks 
