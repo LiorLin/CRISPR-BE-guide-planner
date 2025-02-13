@@ -29,11 +29,20 @@ From the provided list of valid guides relevant once can be chosen based on the 
   No "TTTT" in the sequence (can act as transcription terminator leading to low sgRNA expression levels). 
   Ensuring at least one G in the editing window (positions 4-8 from PAM, 3'-to-5').
   
-- **Off-target assesment:** Identify Cytidines within the guide sequence outside the raget position that might convert to <br> T with as well but with low efficiency. 
-- **Mutation Simulation:** Simulate C → T edits in the sequence.
-- **Protein Alignment:** Align modified coding sequences with amino acid sequences to assess mutation effects on the protein.
-- **Disease Association:** Compare simulated mutations with known disease variants to prioritize guides.
-- **Output:** Export the results including guide sequences, position, simulated mutation, predicted effect,<br> and disease-association to CSV or Excel format.
+**Mutation Simulation:**
+<p>(C → T edits in the antisense DNA strand result in G → A edits in the sense DNA strand).
+  
+- Converts G → A in the editing window (one at a time).
+- Reconstructs the mutated sequence.
+- Classifies mutations into:
+  Silent Mutation → No change in the amino acid sequence.
+  Missense Mutation → Changes the amino acid.
+  Nonsense Mutation → Introduces a stop codon (*). 
+
+**Store and Save Results:**
+- Stores guide sequence, guide's position in the sequence, number of Gs in the editing window, the mutation type, the original and "mutated" amino acid and the position of   the edited G in the sequence.
+  (Only stores guides that cause non-silent mutation)
+- Exports data to a CSV file (gRNA_results.csv).
 
 ## Requirments
 - Python 3.8+
