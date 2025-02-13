@@ -14,29 +14,29 @@ From the provided list of valid guides relevant once can be chosen based on the 
 *For chosen guides it is recommended to check off target effects using BLAST or similar programs.  
 
 ## Overview of the Workflow
-**Data Retrieval :**
+**Data Retrieval:**
 - User provides a gene name (e.g., "SOD1").
-- The program queries NCBI to:
-  Retrieve the Gene ID.
-  Retrieve the Nucleotide (RefSeq) ID.
-  Fetch the full nucleotide coding sequence. 
-
+- The program queries NCBI to:  
+  Retrieve the Gene ID.  
+  Retrieve the Nucleotide (RefSeq) ID.  
+  Fetch the full nucleotide coding sequence.
+  
 **Guide Identification:**
 - Finds NGG PAM sites in the nucleotife sequence.
 - Extracts 20-base guides upstream of each NGG.
-- Filters guides based on:
-  GC content (8-12).
-  No "TTTT" in the sequence (can act as transcription terminator leading to low sgRNA expression levels). 
+- Filters guides based on:  
+  GC content (8-12).  
+  No "TTTT" in the sequence (can act as transcription terminator leading to low sgRNA expression levels).   
   Ensuring at least one G in the editing window (positions 4-8 from PAM, 3'-to-5').
-  
-**Mutation Simulation:**
-<p>(C → T edits in the antisense DNA strand result in G → A edits in the sense DNA strand).
+
+**Mutation Simulation:**  
+(C → T edits in the antisense DNA strand result in G → A edits in the sense DNA strand).
   
 - Converts G → A in the editing window (one at a time).
 - Reconstructs the mutated sequence.
-- Classifies mutations into:
-  Silent Mutation → No change in the amino acid sequence.
-  Missense Mutation → Changes the amino acid.
+- Classifies mutations into:  
+  Silent Mutation → No change in the amino acid sequence.  
+  Missense Mutation → Changes the amino acid.  
   Nonsense Mutation → Introduces a stop codon (*). 
 
 **Store and Save Results:**
@@ -46,11 +46,14 @@ From the provided list of valid guides relevant once can be chosen based on the 
 
 ## Requirments
 - Python 3.8+
-- Libraries: BioPython, Pandas, Requests
-- Access to UCSC Genome Browser or equivalent genome database
-
-During the project's development, the requirements may be added or changed.  
-
+- Python packages : Requests, BioPython
+```bash
+pip install requests biopython
+````
+To execute the full pipeline, run:
+```bash
+python main.py
+```
 ## Note 
 This project is a final assignment for the [Basic programming in Pyhton course](https://github.com/szabgab/wis-python-course-2024-11) at the Weizmann Institute of Science taught by [Gabor Szabo](https://github.com/szabgab). 
 
