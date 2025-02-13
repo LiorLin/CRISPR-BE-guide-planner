@@ -5,12 +5,20 @@ In particular, CRISPR base-editor is an advanced tool that generates single-nucl
 
 ## Aim
 <img src="sgRNA.jpg" align="right"  width="250" style="border-radius: 50%; margin-right: 10px;">
-<p>This project aims to develop a Python-based tool to assist us - students and researchers - in designing gRNAs tailored for CRISPR base-editing. The tool will identify candidate gRNAs and predict their potential edits. It will further assess the biological impact of the induced mutation (mis-sense, non-sense, frameshifts etc.) and search for those associated with disease.</p>
+<p>This project aims to develop a Python-based tool to assist us - students and researchers - in designing and evaluating gRNAs tailored for CRISPR base-editing. The tool will retrieve genomic data, identify candidate gRNAs and simulate their potential edits at the codon level. It will then assess the effect of the induced mutation on the amino acid sequence. 
+  
+From the provided list of valid guides relevant once can be chosen based on the specific needs for the study. For example, guides that promote mutations associated with disease.</p>
 
-<p>As part of my research on the devastating neurodegenerative disease Amyotrophic lateral sclerosis (ALS) I aim to model familial SOD1-ALS in cell culture.This tool will help me design guides for creating ALS-related mutations in HT29 cells that have the CRISPR base-editor integrated into their genomes.</p>
+<p>As part of my research on the devastating neurodegenerative disease Amyotrophic lateral sclerosis (ALS) I aim to model familial SOD1-ALS in cell culture. This program will help me design guides for creating ALS-related mutations in HT29 cells that have the CRISPR base-editor integrated into their genomes.</p>
 
-## Workflow
-
+## Overview of the Workflow
+**Data Retrieval :**
+- User provides a gene name (e.g., "SOD1").
+- The program queries NCBI to:
+  Retrieve the Gene ID.
+  Retrieve the Nucleotide (RefSeq) ID.
+  Fetch the full nucleotide sequence.
+  
 - **Data Retrieval:** Fetch gene sequences from the UCSC Genome Browser.
 - **Guide Identification:** Identify 20-base sequences upstream of PAM sites (NGG) with Cytidines (C) in target positions.
 - **Off-target assesment:** Identify Cytidines within the guide sequence outside the raget position that might convert to <br> T with as well but with low efficiency. 
