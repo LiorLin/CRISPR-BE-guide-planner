@@ -11,16 +11,24 @@ From the provided list of valid guides relevant once can be chosen based on the 
 
 <p>As part of my research on the devastating neurodegenerative disease Amyotrophic lateral sclerosis (ALS) I aim to model familial SOD1-ALS in cell culture. This program will help me design guides for creating ALS-related mutations in HT29 cells that have the CRISPR base-editor integrated into their genomes.</p>
 
+*For chosen guides it is recommended to check off target effects using BLAST or similar programs.  
+
 ## Overview of the Workflow
 **Data Retrieval :**
 - User provides a gene name (e.g., "SOD1").
 - The program queries NCBI to:
   Retrieve the Gene ID.
   Retrieve the Nucleotide (RefSeq) ID.
-  Fetch the full nucleotide sequence.
+  Fetch the full nucleotide coding sequence. 
+
+**Guide Identification:**
+- Finds NGG PAM sites in the nucleotife sequence.
+- Extracts 20-base guides upstream of each NGG.
+- Filters guides based on:
+  GC content (8-12).
+  No "TTTT" in the sequence (can act as transcription terminator leading to low sgRNA expression levels). 
+  Ensuring at least one G in the editing window (positions 4-8 from PAM, 3'-to-5').
   
-- **Data Retrieval:** Fetch gene sequences from the UCSC Genome Browser.
-- **Guide Identification:** Identify 20-base sequences upstream of PAM sites (NGG) with Cytidines (C) in target positions.
 - **Off-target assesment:** Identify Cytidines within the guide sequence outside the raget position that might convert to <br> T with as well but with low efficiency. 
 - **Mutation Simulation:** Simulate C → T edits in the sequence.
 - **Protein Alignment:** Align modified coding sequences with amino acid sequences to assess mutation effects on the protein.
