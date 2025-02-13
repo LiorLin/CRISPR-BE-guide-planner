@@ -56,6 +56,6 @@ python main.py
 ```
 ## Testing the code 
 There are test codes for the different modules to verify that the program functions correctly and produces the expected results. 
-## Note 
+## Remarks 
 This project is a final assignment for the [Basic programming in Pyhton course](https://github.com/szabgab/wis-python-course-2024-11) at the Weizmann Institute of Science taught by [Gabor Szabo](https://github.com/szabgab). 
 
