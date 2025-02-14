@@ -51,6 +51,13 @@ From the provided list of valid guides relevant once can be chosen based on the 
 pip install requests biopython
 ````
 ## Running the program
+- Clone the project's repository: 
+```bash
+git clone https://github.com/LiorLin/CRISPR-BE-guide-planner.git
+cd CRISPR-BE-guide-planner
+```
+- Otherwise manually download the project files.
+  
 - To execute the full pipeline, run:
 ```bash
 python main.py
